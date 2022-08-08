@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #222;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    background-size: cover;
+    font-size: 110%;
+}
+
+/* The Card conatining all weather elements */
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    width: 100%;
+    height: 100vh;
+    max-width: 420px;
+    margin: 1em;
+    transition: 0.6s ease-in-out;
+}
+
+/* Class when 1st Time Searching */
+.card.load {
+    height: 20vh;
+    border-radius: 30px;
+}
+
+/* Search Bar Section */
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search .search-bar {
+    border: none;
+    outline: none;
+    padding: 0.4em 1em;
+    border-radius: 24px;
+    background: #7c7c7c2b;
+    color: white;
+    font-family: inherit;
+    font-size: 105%;
+    width: calc(100% - 100px);
+}
+
+.search button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    height: 44px;
+    width: 44px;
+    outline: none;
+    background: #7c7c7c2b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.search button:hover {
+    background: #7c7c7c6b;
+}
+
+/* Weather Section */
+.weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+    transition-delay: 0.8s;
+    transition: 0.6 ease-in-out;
+}
+
+/* Class when 1st Time Searching */
+.weather.loading {
+    visibility: hidden;
+    height: 20%;
+    position: relative;
+}
+
+/* Temperature */
+.weather .temp {
+    margin: 0;
+}
+
+/* Weather Icon */
+.weather .icon {
+    height: 100px;
+    width: 100px;
+    padding: 20px 0;
+}
+
+/* For pairing both Humidity and WindSpeed */
+.weather .duo {
+    display: flex;
+    position: relative;
+    padding: 0 20px;
+}
+
+.weather .duo .i {
+    display: flex;
+    padding: 20px;
+}
+
+/* Weather Description */
+.description {
+    text-align: center;
+    padding: 20px;
+    /* transition-delay: 1.4s; */
+    transition: width 0.3 ease-in-out 1.4;
+}
+
+/* Every CSS selector is placed in the same order of HTML Elements */
